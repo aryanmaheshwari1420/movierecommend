@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movierecommend/utils/text.dart';
+import 'package:movierecommend/widgets/toprated.dart';
 import 'package:movierecommend/widgets/trending.dart';
+import 'package:movierecommend/widgets/tv.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 class Home extends StatefulWidget {
@@ -48,13 +50,15 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 39, 38, 36),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title:modified_text(text: "Flutter Movie app ♥",color: Colors.white, ) 
       ),
       body: ListView(
         children: [
+          TV(tv: tv,),
+          TopratedMovies(toprated: topratedmovies,),
           TrendingMovies(trending: trendingmovies,)
 
         ],

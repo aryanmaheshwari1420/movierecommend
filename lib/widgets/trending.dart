@@ -33,12 +33,13 @@ class TrendingMovies extends StatelessWidget {
                     
                   },
                   child: Container(
-                    width: 140,
+                    width: 150,
                     child: Column(
                       children: [
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
                             image: DecorationImage(image: NetworkImage(
 
                               'https://image.tmdb.org/t/p/w500'+trending[index]['poster_path']
@@ -46,8 +47,9 @@ class TrendingMovies extends StatelessWidget {
                             ))
                           ),
                         ),
+                        SizedBox(height: 10,),
                         Container(
-                          child: modified_text(text: trending[index]['title']!=null?trending[index]['title']:'loading'
+                          child: modified_text(text: trending[index]['title']!=null?trending[index]['title']:'loading',color: Color.fromARGB(255, 190, 213, 55),
                           ),
 
                         )
