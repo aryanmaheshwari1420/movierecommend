@@ -1,10 +1,14 @@
+// @dart = 2.9
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:movierecommend/utils/text.dart';
+import 'package:movierecommend/widgets/trending.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({Key key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
@@ -44,10 +48,16 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text(
-          "Flutter Movie app",
-        ),
+        backgroundColor: Colors.transparent,
+        title:modified_text(text: "Flutter Movie app ♥",color: Colors.white, ) 
+      ),
+      body: ListView(
+        children: [
+          TrendingMovies(trending: trendingmovies,)
+
+        ],
       ),
     );
   }
