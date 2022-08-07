@@ -44,7 +44,7 @@ class TrendingDescription extends StatelessWidget {
           ),
           ),
           Container(padding: EdgeInsets.only(left:10),
-          child: modified_text(text: "Releasing On  :"+launch_on,size: 14,color: Colors.white,),),
+          child: modified_text(text: "Released On  :"+launch_on,size: 14,color: Colors.white,),),
           Row(
             children: [
               Container(
@@ -55,7 +55,7 @@ class TrendingDescription extends StatelessWidget {
               ),
               Flexible(
                 child: Container(
-                  child: modified_text(text: Description,size: 17,color: Colors.white,),
+                  child: modified_text(text:"Overview :\n"+ Description,size: 17,color: Colors.white,),
                 ),
               )
             ],

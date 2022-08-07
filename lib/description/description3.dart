@@ -55,7 +55,7 @@ class TvDescription extends StatelessWidget {
               ),
               Flexible(
                 child: Container(
-                  child: modified_text(text: Description,size: 17,color: Colors.white,),
+                  child: modified_text(text:"Overview :\n"+ Description,size: 17,color: Colors.white,),
                 ),
               )
             ],
