@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Color.fromARGB(255, 39, 38, 36),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title:Center(child: modified_text(text: "Flutter Movie app ♥",color: Colors.white, )) 
+        title:Center(child: modified_text(text: " Movies Description ♥",color: Colors.white, )) 
       ),
       body: ListView(
         children: [
