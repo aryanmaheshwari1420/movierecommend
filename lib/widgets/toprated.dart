@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:movierecommend/description/description2.dart';
 import 'package:movierecommend/utils/text.dart';
 
 class TopratedMovies extends StatelessWidget {
@@ -30,6 +31,20 @@ class TopratedMovies extends StatelessWidget {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
+                     Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TopratedDescription(
+                            name: toprated[index]['original_name'],
+                            banner_url: 'https://image.tmdb.org/t/p/w500' +
+                                toprated[index]['backdrop_path'],
+                            poster_url: 'https://image.tmdb.org/t/p/w500' +
+                                toprated[index]['poster_path'],
+                            Description: toprated[index]['overview'],
+                            vote: toprated[index]['vote_average'].toString(),
+                            launch_on: toprated[index]['release_date'],
+                          ),
+                        ));
                     
                   },
                   child: Container(

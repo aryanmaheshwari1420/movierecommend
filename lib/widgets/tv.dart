@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:movierecommend/description/description3.dart';
 import 'package:movierecommend/utils/text.dart';
 
 class TV extends StatelessWidget {
@@ -30,6 +31,20 @@ class TV extends StatelessWidget {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
+                     Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TvDescription(
+                            name: tv[index]['name'],
+                            banner_url: 'https://image.tmdb.org/t/p/w500' +
+                                tv[index]['backdrop_path'],
+                            poster_url: 'https://image.tmdb.org/t/p/w500' +
+                                tv[index]['poster_path'],
+                            Description: tv[index]['overview'],
+                            vote: tv[index]['vote_average'].toString(),
+                            popularity: tv[index]['popularity'].toString(),
+                          ),
+                        ));
                     
                   },
                   child: Container(
