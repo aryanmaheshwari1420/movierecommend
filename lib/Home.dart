@@ -50,8 +50,63 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            SizedBox(height: 80,
+            child: Center(child: Text("Choose",style: TextStyle(fontSize: 24),)),
+            ),
+            ListTile(
+              leading: Icon(Icons.play_arrow_sharp),
+              title: Text("TV Seasons"),
+              subtitle: Text("Developer"),
+              trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+              },
+            ),
+            SizedBox(height: 15,),
+            ListTile(
+              leading: Icon(Icons.play_arrow_sharp),
+              title: Text("TV Episodes"),
+              subtitle: Text("Tester"),
+              trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+               
+              },
+            ),
+             SizedBox(height: 15,),
+            ListTile(
+              leading: Icon(Icons.play_arrow_sharp),
+              title: Text("Guest Seasons"),
+              subtitle: Text("Front-End"),
+              trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+               
+              },
+            ),
+             SizedBox(height: 15,),
+            ListTile(
+              leading: Icon(Icons.play_arrow_sharp),
+              title: Text("Discover"),
+              subtitle: Text("Back-End"),
+              trailing: Icon(Icons.arrow_forward_ios),
+            ),
+              SizedBox(height: 15,),
+            ListTile(
+              leading: Icon(Icons.play_arrow_sharp),
+              title: Text("Collections"),
+              subtitle: Text("Back-End"),
+              trailing: Icon(Icons.arrow_forward_ios),
+            )
+
+          ],
+
+        ),
+      ),
       backgroundColor: Color.fromARGB(255, 39, 38, 36),
       appBar: AppBar(
+        
         backgroundColor: Colors.transparent,
         title:Center(child: modified_text(text: " Movies Description ♥",color: Colors.white, )) 
       ),
