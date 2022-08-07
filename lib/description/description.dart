@@ -5,12 +5,12 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movierecommend/utils/text.dart';
 
-class Description extends StatelessWidget {
-  final String name, description, banner_url, poster_url, vote, launch_on;
-  const Description(
+class TrendingDescription extends StatelessWidget {
+  final String name,Description, banner_url, poster_url, vote, launch_on;
+  const TrendingDescription(
       {Key key,
       this.name,
-      this.description,
+      this.Description,
       this.banner_url,
       this.poster_url,
       this.vote,
@@ -55,7 +55,7 @@ class Description extends StatelessWidget {
               ),
               Flexible(
                 child: Container(
-                  child: modified_text(text: description,size: 17,color: Colors.white,),
+                  child: modified_text(text: Description,size: 17,color: Colors.white,),
                 ),
               )
             ],
