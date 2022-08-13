@@ -182,7 +182,7 @@ class _screen_3State extends State<SignUp> {
                                   _passcontroller.text.isEmpty) {
                                 if (_re_passcontroller.text.length <= 5 ||
                                     _re_passcontroller.text.isEmpty) {
-                                  _repasserror = "Enter the same email";
+                                  _repasserror = "Enter the same pass";
                                 }
                                 _passError = "Enter a valid pass";
                               }
