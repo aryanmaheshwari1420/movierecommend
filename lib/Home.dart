@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movierecommend/utils/text.dart';
+import 'package:movierecommend/widgets/Tvseason.dart';
 import 'package:movierecommend/widgets/toprated.dart';
 import 'package:movierecommend/widgets/trending.dart';
 import 'package:movierecommend/widgets/tv.dart';
@@ -54,8 +55,13 @@ class _HomeState extends State<Home> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            SizedBox(height: 80,
-            child: Center(child: Text("Choose",style: TextStyle(fontSize: 24),)),
+            SizedBox(
+              height: 80,
+              child: Center(
+                  child: Text(
+                "Choose",
+                style: TextStyle(fontSize: 24),
+              )),
             ),
             ListTile(
               leading: Icon(Icons.play_arrow_sharp),
@@ -63,59 +69,73 @@ class _HomeState extends State<Home> {
               subtitle: Text("Developer"),
               trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    // return TVSeason();
+                  },
+                ));
               },
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             ListTile(
               leading: Icon(Icons.play_arrow_sharp),
               title: Text("TV Episodes"),
               subtitle: Text("Tester"),
               trailing: Icon(Icons.arrow_forward_ios),
-              onTap: () {
-               
-              },
+              onTap: () {},
             ),
-             SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             ListTile(
               leading: Icon(Icons.play_arrow_sharp),
               title: Text("Guest Seasons"),
               subtitle: Text("Front-End"),
               trailing: Icon(Icons.arrow_forward_ios),
-              onTap: () {
-               
-              },
+              onTap: () {},
             ),
-             SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             ListTile(
               leading: Icon(Icons.play_arrow_sharp),
               title: Text("Discover"),
               subtitle: Text("Back-End"),
               trailing: Icon(Icons.arrow_forward_ios),
             ),
-              SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             ListTile(
               leading: Icon(Icons.play_arrow_sharp),
               title: Text("Collections"),
               subtitle: Text("Back-End"),
               trailing: Icon(Icons.arrow_forward_ios),
             )
-
           ],
-
         ),
       ),
       backgroundColor: Color.fromARGB(255, 39, 38, 36),
       appBar: AppBar(
-        
-        backgroundColor: Colors.transparent,
-        title:Center(child: modified_text(text: " Movies Description ♥",color: Colors.white, )) 
-      ),
+          backgroundColor: Colors.transparent,
+          title: Center(
+              child: modified_text(
+            text: " Movies Description ♥",
+            color: Colors.white,
+          ))),
       body: ListView(
         children: [
-          TV(tv: tv,),
-          TopratedMovies(toprated: topratedmovies,),
-          TrendingMovies(trending: trendingmovies,)
-
+          TV(
+            tv: tv,
+          ),
+          TopratedMovies(
+            toprated: topratedmovies,
+          ),
+          TrendingMovies(
+            trending: trendingmovies,
+          )
         ],
       ),
     );
